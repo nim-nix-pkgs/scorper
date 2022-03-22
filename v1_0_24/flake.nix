@@ -8,8 +8,8 @@
   inputs.flakeNimbleLib.inputs.nixpkgs.follows = "nixpkgs";
   
   inputs.src-scorper-v1_0_24.flake = false;
+  inputs.src-scorper-v1_0_24.ref   = "refs/tags/v1.0.24";
   inputs.src-scorper-v1_0_24.owner = "bung87";
-  inputs.src-scorper-v1_0_24.ref   = "v1_0_24";
   inputs.src-scorper-v1_0_24.repo  = "scorper";
   inputs.src-scorper-v1_0_24.type  = "github";
   
