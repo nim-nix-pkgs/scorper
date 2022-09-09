@@ -7,11 +7,11 @@
   inputs.flakeNimbleLib.type  = "github";
   inputs.flakeNimbleLib.inputs.nixpkgs.follows = "nixpkgs";
   
-  inputs.src-scorper-v1_0_21.flake = false;
-  inputs.src-scorper-v1_0_21.ref   = "refs/tags/v1.0.21";
-  inputs.src-scorper-v1_0_21.owner = "bung87";
-  inputs.src-scorper-v1_0_21.repo  = "scorper";
-  inputs.src-scorper-v1_0_21.type  = "github";
+  inputs.src-scorper-v1_0_27.flake = false;
+  inputs.src-scorper-v1_0_27.ref   = "refs/tags/v1.0.27";
+  inputs.src-scorper-v1_0_27.owner = "bung87";
+  inputs.src-scorper-v1_0_27.repo  = "scorper";
+  inputs.src-scorper-v1_0_27.type  = "github";
   
   inputs."chronos".owner = "nim-nix-pkgs";
   inputs."chronos".ref   = "master";
@@ -45,18 +45,18 @@
   inputs."jsony".inputs.nixpkgs.follows = "nixpkgs";
   inputs."jsony".inputs.flakeNimbleLib.follows = "flakeNimbleLib";
   
-  inputs."result".owner = "nim-nix-pkgs";
-  inputs."result".ref   = "master";
-  inputs."result".repo  = "result";
-  inputs."result".dir   = "master";
-  inputs."result".type  = "github";
-  inputs."result".inputs.nixpkgs.follows = "nixpkgs";
-  inputs."result".inputs.flakeNimbleLib.follows = "flakeNimbleLib";
+  inputs."stew".owner = "nim-nix-pkgs";
+  inputs."stew".ref   = "master";
+  inputs."stew".repo  = "stew";
+  inputs."stew".dir   = "master";
+  inputs."stew".type  = "github";
+  inputs."stew".inputs.nixpkgs.follows = "nixpkgs";
+  inputs."stew".inputs.flakeNimbleLib.follows = "flakeNimbleLib";
   
   inputs."urlly".owner = "nim-nix-pkgs";
   inputs."urlly".ref   = "master";
   inputs."urlly".repo  = "urlly";
-  inputs."urlly".dir   = "1_0_1";
+  inputs."urlly".dir   = "0_2_0";
   inputs."urlly".type  = "github";
   inputs."urlly".inputs.nixpkgs.follows = "nixpkgs";
   inputs."urlly".inputs.flakeNimbleLib.follows = "flakeNimbleLib";
@@ -64,13 +64,13 @@
   outputs = { self, nixpkgs, flakeNimbleLib, ...}@deps:
   let 
     lib  = flakeNimbleLib.lib;
-    args = ["self" "nixpkgs" "flakeNimbleLib" "src-scorper-v1_0_21"];
+    args = ["self" "nixpkgs" "flakeNimbleLib" "src-scorper-v1_0_27"];
     over = if builtins.pathExists ./override.nix 
            then { override = import ./override.nix; }
            else { };
   in lib.mkRefOutput (over // {
     inherit self nixpkgs ;
-    src  = deps."src-scorper-v1_0_21";
+    src  = deps."src-scorper-v1_0_27";
     deps = builtins.removeAttrs deps args;
     meta = builtins.fromJSON (builtins.readFile ./meta.json);
   } );
