@@ -188,7 +188,7 @@
         "jsony": "jsony",
         "nixpkgs": "nixpkgs",
         "npeg": "npeg",
-        "src-scorper-devel": "src-scorper-devel",
+        "src-scorper-v1_0_27": "src-scorper-v1_0_27",
         "stew": "stew_3",
         "urlly": "urlly",
         "zippy": "zippy"
@@ -279,19 +279,19 @@
         "type": "github"
       }
     },
-    "src-scorper-devel": {
+    "src-scorper-v1_0_27": {
       "flake": false,
       "locked": {
-        "lastModified": 1662892382,
-        "narHash": "sha256-XN4PYo9W5c4tz0EV2o/F8kaZ9tsLFD4UM3379n8jd4g=",
+        "lastModified": 1662375301,
+        "narHash": "sha256-dhmPPLHnAGOFaOFmY1YqQ0siJAI4T7m0wSLWr1bPvwc=",
         "owner": "bung87",
         "repo": "scorper",
-        "rev": "ac56dcce0462198babb2aeea05643ecd9c041e6d",
+        "rev": "c0eef5d46201ee48ae75ede7c902f0f300db6561",
         "type": "github"
       },
       "original": {
         "owner": "bung87",
-        "ref": "refs/heads/devel",
+        "ref": "refs/tags/v1.0.27",
         "repo": "scorper",
         "type": "github"
       }
